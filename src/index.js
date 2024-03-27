@@ -15,6 +15,7 @@ import Sidebar from './components/sidebar/Sidebar';
 import SinglePost from './components/singlePost/SinglePost';
 import SinglePost2 from './components/singlePost2/SinglePost2';
 import Singlepost3 from './components/singlepost3/Singlepost3';
+import Contact from './components/contact/Contact';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -35,6 +36,13 @@ const router = createBrowserRouter([
     <Write/>
     </>
   },
+  {
+    path:"contact",
+    element:<>
+      <TopBar/>
+      <Contact/>
+    </>
+,  },
   {
     path: "settings",
     element: <>
@@ -88,5 +96,3 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <RouterProvider router={router} />
 );
-
-

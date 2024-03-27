@@ -12,7 +12,7 @@ export default function TopBar(){
                 <ul className="toplist">
                     <li className="toplistitem"><button className="h1"><Link to="/home" className="l4" >HOME</Link></button></li>
                     <li className="toplistitem"><button className="h1"><Link to="/about" className="l4" >ABOUT</Link></button></li>
-                    <li className="toplistitem"><button className="h1">CONTACT</button></li>
+                    <li className="toplistitem"><button className="h1"><Link to ="/contact" className="l4">CONTACT</Link></button></li>
                     <li className="toplistitem"><button className="h1"><Link to="/write" className="l4" >WRITE</Link></button></li>
                     <li className="toplistitem"><button className="h1"><Link to="/logout" className="l4" >LOGOUT</Link></button></li>
                 </ul>

@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './write.css';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 export default function Write() {
   const [title, setTitle] = useState('');
@@ -34,7 +36,14 @@ export default function Write() {
       setEditIndex(null);
     } else {
       const newPost = { title, content, image };
-      setPosts([...posts, newPost]);
+      axios.post('http://localhost:3001/insertData', {
+        title,
+        description: content
+      }).then(data=>{
+        setPosts([...posts, newPost]);
+      }).catch(err=>{
+        console.log(err)
+      })
     }
 
     setTitle('');
@@ -59,7 +68,7 @@ export default function Write() {
 
   return (
     <div className="write">
-      <form className="writeForm" onSubmit={handleSubmit}>
+       <form className="writeForm" onSubmit={handleSubmit}>
         <div className="writeFormGroup">
           <input
             type="text"
