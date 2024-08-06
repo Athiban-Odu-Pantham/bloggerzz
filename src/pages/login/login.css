@@ -51,3 +51,8 @@
     text-decoration: none;
     color: white;
 }
+.googleLogin {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
